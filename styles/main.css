@@ -1,48 +1,63 @@
+body {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
 @media screen and (max-width: 300px) {
-    body {
-      background-color: olive;
-    }
-    .game-page{
-        display: flex;
-        flex-direction: column;
-    }
-    
-    .image-container {
-        display: grid; 
-        grid-auto-columns: 1fr; 
-        grid-auto-rows: 1fr; 
-        grid-template-columns: repeat(4, 1fr); 
-        grid-template-rows: repeat(4, 1fr); 
-        gap: 8px 8px; 
-      }
-    
-      .image {
-          background-color: aqua;
-          border: 1px solid green;
-      }
+
+  .login-page {
+    display: flex;
+    flex-direction: row;
+    height: 100vh;
+    background-color: aquamarine;
   }
 
-  @media screen and (min-width: 301px) {
-    body {
-      background-color: rgb(49, 39, 89);
-    }
-    .game-page{
-        display: flex;
-        flex-direction: column;
-    }
-    
-    .image-container {
-        display: grid; 
-        grid-auto-columns: 1fr; 
-        grid-auto-rows: 1fr; 
-        grid-template-columns: repeat(4, 1fr); 
-        grid-template-rows: repeat(4, 1fr); 
-        gap: 8px 8px; 
-      }
-    
-      .image {
-          background-color: aqua;
-          border: 1px solid green;
-      }
+  .game-page {
+    display: flex;
+    height: 100vh;
+
   }
 
+  .image-container {
+    display: grid;
+    grid-auto-columns: 1fr;
+    grid-auto-rows: 1fr;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    gap: 8px 8px;
+  }
+
+  .image {
+    background-color: aqua;
+    border: 1px solid green;
+  }
+}
+
+@media screen and (min-width: 301px) {
+
+  .login-page {
+    display: flex;
+    height: 100vh;
+    background-color: aquamarine;
+  }
+
+  .game-page {
+    display: flex;
+    height: 100vh;
+    flex-direction: column;
+  }
+
+  .image-container {
+    display: grid;
+    grid-auto-columns: 1fr;
+    grid-auto-rows: 1fr;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    gap: 8px 8px;
+  }
+
+  .image {
+    background-color: aqua;
+    border: 1px solid green;
+  }
+}
