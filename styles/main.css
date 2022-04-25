@@ -10,6 +10,8 @@ body {
     flex-direction: column;
     height: 100vh;
     background-color: aquamarine;
+    justify-content: center;
+    align-items: center;
   }
 
   .game-page {
@@ -40,6 +42,8 @@ body {
     flex-direction: column;
     height: 100vh;
     background-color: aquamarine;
+    justify-content: center;
+    align-items: center;
   }
 
   .game-page {
