@@ -1,44 +1,53 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script type="module" src="./scripts/main.js"></script>
     <script type="module" src="./scripts/login.js"></script>
-    <link rel="stylesheet" href="./styles/main.css">
+    <link rel="stylesheet" href="./styles/main.css" />
     <title>Memory</title>
-</head>
-<body>
-   <section id="loginPage" class="login-page">
-       <div class="wrapper">
-       <input type="text" id="userNameImput" class="user-name-input"/>
-       <button type="button" id="btnLogIn" class="btn-log-in"> Log in </button>
-    </div>
-   </section>
-   <section id="gamePage" class="game-page">
-       <div class>
-
-       </div>
-       <div id="imageContainer" class="image-container">
-           <div class="image">1</div>
-           <div class="image">2</div>
-           <div class="image">3</div>
-           <div class="image">4</div>
-           <div class="image">5</div>
-           <div class="image">6</div>
-           <div class="image">7</div>
-           <div class="image">8</div>
-           <div class="image">1</div>
-           <div class="image">2</div>
-           <div class="image">3</div>
-           <div class="image">4</div>
-           <div class="image">5</div>
-           <div class="image">6</div>
-           <div class="image">7</div>
-           <div class="image">8</div>
-       </div>
-   </section>
-   <section id="winPage" class="win-page"></section> 
-</body>
+  </head>
+  <body>
+    <section id="loginPage" class="login-page">
+      <div class="input-block">
+          <h1>Chose a user name</h1>
+        <input type="text" id="userNameImput" class="user-name-input" />
+        <button type="button" id="btnLogIn" class="btn-log-in">Log in</button>
+      </div>
+      <div class="score-block">
+          <h2>User scores</h2>
+          <ul>
+              <li></li>
+              <li></li>
+              <li></li>
+              <li></li>
+              <li></li>
+          </ul>
+      </div>
+    </section>
+    <section id="gamePage" class="game-page">
+      <div class></div>
+      <div id="imageContainer" class="image-container">
+        <div class="image">1</div>
+        <div class="image">2</div>
+        <div class="image">3</div>
+        <div class="image">4</div>
+        <div class="image">5</div>
+        <div class="image">6</div>
+        <div class="image">7</div>
+        <div class="image">8</div>
+        <div class="image">1</div>
+        <div class="image">2</div>
+        <div class="image">3</div>
+        <div class="image">4</div>
+        <div class="image">5</div>
+        <div class="image">6</div>
+        <div class="image">7</div>
+        <div class="image">8</div>
+      </div>
+    </section>
+    <section id="winPage" class="win-page"></section>
+  </body>
 </html>

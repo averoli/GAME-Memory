@@ -4,16 +4,25 @@ const inputUser = document.getElementById("userNameImput");
 let userName = "";
 
 const player = { name: "", totalScore: 0 };
-let players = []
+let players;
 
 btnLogIn.addEventListener("click", function BtnLog() {
+if(localStorage.name == ""){
+    console.log("1");
+    userName = inputUser.value;
+    (player.name = userName), (player.totalScore = 0);
+  
+    players = JSON.stringify(player);
+    localStorage.setItem("name", players);
+    inputUser.value = "";
+} else {
+    console.log("gaga");
+}
+ 
 
-  userName = inputUser.value;
-  (player.name = userName), (player.totalScore = 0);
+ 
+  
 
-  players = JSON.stringify(player);
-  localStorage.setItem("name", players);
-  inputUser.value = "";
 
 
 //   let inter = localStorage.getItem("1");
