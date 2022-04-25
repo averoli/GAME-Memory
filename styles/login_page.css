@@ -1,0 +1,55 @@
+.login-section {
+    margin-inline: auto;
+    width: min(90%, 90rem);
+    background-color: rgb(255, 255, 255);
+    border-radius: 1rem;
+    background: #F7F8F8;
+}
+
+.form-container {
+    border: 2px solid black;
+    margin: 2em;
+    border-radius: 1em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    padding: 0 1em;
+
+}
+
+form>* {
+    margin-bottom: 1em;
+}
+
+@media (min-width:50rem) {
+
+    .login-section {
+        /* fallback for old browsers */
+        background: -webkit-linear-gradient(to right, #F7F8F8, #ff1616);
+        /* Chrome 10-25, Safari 5.1-6 */
+        background-image: url("../assets/background2.png"), linear-gradient(to right, #F7F8F8, #ff1616);
+        /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: right top;
+        border-radius: 1em;
+        width: 90%;
+    }
+
+    img {
+        margin-top: 10rem;
+    }
+
+    .form-container {
+        border: none;
+    }
+
+}
