@@ -22,8 +22,10 @@ body {
   @media (min-width:50rem) {
     .split {
       flex-direction: row;
+
     }
     .split>* {
+      
       flex-basis: 100%;
     }
 
