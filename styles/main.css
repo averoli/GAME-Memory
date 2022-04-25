@@ -13,10 +13,6 @@ body {
     padding: 1em 0;
     margin: 1rem;
   }
-  img {
-    display: block;
-    max-width: 100%;
-  }
   .split {
     display: flex;
     flex-direction: column;

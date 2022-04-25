@@ -13,22 +13,23 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
 }
 
 form {
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-content: center;
     padding: 0 1em;
-
+    justify-content: center;
 }
 
 form>* {
     margin-bottom: 1em;
 }
 
+img {
+    display: block;
+    max-width: 100%;
+}
 @media (min-width:50rem) {
 
     .login-section {
@@ -44,12 +45,8 @@ form>* {
         width: 90%;
     }
 
-    img {
-        margin-top: 10rem;
-    }
-
     .form-container {
-        border: none;
+        border: 1px solid white;
     }
 
 }
