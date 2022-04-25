@@ -14,7 +14,6 @@ btnLogIn.addEventListener("click", function BtnLogIn() {
   localStorage.setItem(up1.name, JSON.stringify(up1));
   let data = JSON.parse(localStorage.getItem(up1.name))
 
-
     let player = document.createElement("li");
     player.textContent = data.name;
     document.getElementById("userList").appendChild(player);
