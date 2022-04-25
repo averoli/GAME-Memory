@@ -7,7 +7,7 @@ const inputUser = document.getElementById("userNameImput");
 // let i = 0;
 let playerList= [];
 let up1 = new Object();
-let player;
+
 
 btnLogIn.addEventListener("click", function BtnLogIn() {
   up1 = {
@@ -27,13 +27,14 @@ btnLogIn.addEventListener("click", function BtnLogIn() {
 
   localStorage.setItem("all_users", JSON.stringify(playerList));
   
-  for (let i = 0; i < playerList.length; i++) {
+   for (let i = 0; i < playerList.length; i++) {
 
-    player = document.createElement("li");
-    player.textContent = playerList[i].name;
-
+    let player =document.createElement("li");
 
     document.getElementById("userList").appendChild(player);
-  }
+
+
+   player.textContent = playerList.name;
+   }
 });
 
