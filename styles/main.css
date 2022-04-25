@@ -1,4 +1,5 @@
 @import url(login_page.css);
+@import url(game_page.css);
 body,
 * {
   margin: 0;
@@ -22,9 +23,9 @@ body {
     .split {
       flex-direction: row;
     }
-      .split>* {
-        flex-basis: 100%;
-      }
+    .split>* {
+      flex-basis: 100%;
+    }
 
 }
 .hideElement {

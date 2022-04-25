@@ -20,6 +20,7 @@ form {
     flex-direction: column;
     padding: 0 1em;
     justify-content: center;
+    max-width: 100%;
 }
 
 form>* {
@@ -30,6 +31,7 @@ img {
     display: block;
     max-width: 100%;
 }
+
 @media (min-width:50rem) {
 
     .login-section {
@@ -47,6 +49,14 @@ img {
 
     .form-container {
         border: 1px solid white;
+    }
+    /* form {
+            margin-top: -3rem;
+            z-index: 2;
+        } */
+    
+    form>* {
+        height: 5rem;
     }
 
 }
