@@ -3,6 +3,11 @@ body {
     margin: 0;
     box-sizing: border-box;
 }
+
+h1{
+text-align: center;
+}
+
 @media screen and (max-width: 300px) {
 
   .login-page {
@@ -14,6 +19,10 @@ body {
     align-items: center;
   }
 
+  .input-block {
+    display: flex;
+    flex-direction: column;
+  }
   .game-page {
     display: flex;
     height: 100vh;
