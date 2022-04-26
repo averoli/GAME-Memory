@@ -1,3 +1,5 @@
+import setTime from "./timer.js"
+
 const btnLogIn = document.getElementById("btnLogIn");
 const inputUser = document.getElementById("userNameImput");
 
@@ -5,8 +7,9 @@ const inputUser = document.getElementById("userNameImput");
 let playerList = [];
 let userData = new Object();
 
-let listElement = document.createElement("li");
-const users = JSON.parse(localStorage.getItem("all_users"));
+
+if(localStorage.length > 0){
+  const users = JSON.parse(localStorage.getItem("all_users"));
 if(users.length > 0){
   for (let i= 0; i< users.length; i++){
     let listElement = document.createElement("li");
@@ -14,7 +17,7 @@ if(users.length > 0){
     document.getElementById("usersTable").appendChild(listElement);
   }
 }
-
+}
 
 btnLogIn.addEventListener("click", function BtnLogIn() {
   if (inputUser.value !== "") {
@@ -35,6 +38,7 @@ btnLogIn.addEventListener("click", function BtnLogIn() {
     listElement.textContent = playerList[actualPlayer].name;
     document.getElementById("usersTable").appendChild(listElement);
   }
+  setInterval(setTime, 1000);
   inputUser.value = "";
 });
 

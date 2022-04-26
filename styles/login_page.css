@@ -10,6 +10,20 @@
   z-index: -1;
 }
 
+.timer {
+  display: flex;
+
+}
+#seconds {
+  font-size: 5rem;
+}
+#minutes {
+  font-size: 5rem;
+}
+#colon {
+  font-size: 5rem;
+}
+
 .form-container {
   display: flex;
   flex-direction: column;
@@ -40,15 +54,16 @@ form > * {
   padding: 10px;
   border-radius: 5px;
   background-color: #000000;
-  color: #edf2f4;
+  color: #EDF2F4;
+  letter-spacing: 0.3rem;
+  text-align: center;
 }
 
 button {
   border-radius: 5px;
   width: 100%;
-  background-color: #8d99ae;
+  background-color: #8D99AE;
   color: #edf2f4;
-
   letter-spacing: 0.3rem;
   padding: 10px 20px;
 }
@@ -93,7 +108,8 @@ h2 {
 
 @media (max-width: 600px) {
   h2 {
-    font-size: 1rem;
+    font-size: 1.5rem;
+    color: #8D99AE;
   }
 
 }
