@@ -7,42 +7,52 @@
     <script type="module" src="./scripts/main.js"></script>
     <script type="module" src="./scripts/login.js"></script>
     <link rel="stylesheet" href="./styles/main.css" />
+    <link rel="stylesheet" href="./styles/login_page.css" />
+    <link rel="stylesheet" href="./styles/game_page.css" />
     <title>Memory</title>
   </head>
   <body>
-    <section id="loginPage" class="login-page">
-      <div class="input-block">
-          <h1>Chose a user name</h1>
-        <input type="text" id="userNameImput" class="user-name-input" placeholder="User name" />
-        <button type="button" id="btnLogIn" class="btn-log-in">Log in</button>
+    <section id="loginPage" class="login-section">
+      
+      <div class="form-container">
+        <h1>MEMORY</h1>
+        <form action="">
+          <input
+            type="text"
+            id="userNameImput"
+            class="user-name-input"
+            placeholder="USER NAME"
+          />
+          <button type="button" id="btnLogIn" class="btn-log-in">PLAY</button>
+          <button type="button" id="btnChallenge">CHALLENGE</button>
+        </form>
       </div>
-      <div class="score-block">
-          <h2>User scores</h2>
-          <ul id="userList">              
-          </ul>
+      <div class="scores-container">
+        <h2>USER SCORES</h2>
+        <ul id="usersTable" class="user--table-list"></ul>
       </div>
     </section>
-    <section id="gamePage" class="game-page">
-      <div class></div>
+    <section id="gamePage" class="game-section split hideElement">
       <div id="imageContainer" class="image-container">
-        <div class="image">1</div>
-        <div class="image">2</div>
-        <div class="image">3</div>
-        <div class="image">4</div>
-        <div class="image">5</div>
-        <div class="image">6</div>
-        <div class="image">7</div>
-        <div class="image">8</div>
-        <div class="image">1</div>
-        <div class="image">2</div>
-        <div class="image">3</div>
-        <div class="image">4</div>
-        <div class="image">5</div>
-        <div class="image">6</div>
-        <div class="image">7</div>
-        <div class="image">8</div>
+        <div id="cardContainer1" class="image" data="one">1</div>
+        <div id="cardContainer2" class="image" data="two">1</div>
+        <div id="cardContainer3" class="image" data="thre">1</div>
+        <div id="cardContainer4" class="image" data="four">1</div>
+        <div id="cardContainer5" class="image" data="five">1</div>
+        <div id="cardContainer6" class="image" data="six">1</div>
+        <div id="cardContainer7" class="image" data="seven">1</div>
+        <div id="cardContainer8" class="image" data="eight">1</div>
+        <div id="cardContainer9" class="image" data="one">1</div>
+        <div id="cardContainer10" class="image" data="two">1</div>
+        <div id="cardContainer11" class="image" data="thre">1</div>
+        <div id="cardContainer12" class="image" data="four">1</div>
+        <div id="cardContainer13" class="image" data="five">1</div>
+        <div id="cardContainer14" class="image" data="six">1</div>
+        <div id="cardContainer15" class="image" data="seven">1</div>
+        <div id="cardContainer16" class="image" data="eight">1</div>
       </div>
     </section>
-    <section id="winPage" class="win-page"></section>
+
+    <section id="winPage" class="section win-section hideElement"></section>
   </body>
 </html>

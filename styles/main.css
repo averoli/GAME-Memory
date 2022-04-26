@@ -1,77 +1,31 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300;400&display=swap');
+
+html, body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 body {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
+  font-family: 'Roboto Condensed', sans-serif;
+}
+section {
+  padding: 1em 0;
+  margin: 1rem;
+}
+.split {
+  display: flex;
+  flex-direction: column;
 }
 
-h1{
-text-align: center;
-}
-
-@media screen and (max-width: 300px) {
-
-  .login-page {
-    display: flex;
-    flex-direction: column;
-    height: 100vh;
-    background-color: aquamarine;
-    justify-content: center;
-    align-items: center;
+@media (max-width: 300px) {
+  .split {
+    flex-direction: row;
   }
-
-  .input-block {
-    display: flex;
-    flex-direction: column;
-  }
-  .game-page {
-    display: flex;
-    height: 100vh;
-
-  }
-
-  .image-container {
-    display: grid;
-    grid-auto-columns: 1fr;
-    grid-auto-rows: 1fr;
-    grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: repeat(4, 1fr);
-    gap: 8px 8px;
-  }
-
-  .image {
-    background-color: aqua;
-    border: 1px solid green;
+  .split > * {
+    flex-basis: 100%;
   }
 }
-
-@media screen and (min-width: 301px) {
-
-  .login-page {
-    display: flex;
-    flex-direction: column;
-    height: 100vh;
-    background-color: aquamarine;
-    justify-content: center;
-    align-items: center;
-  }
-
-  .game-page {
-    display: flex;
-    height: 100vh;
-    flex-direction: column;
-  }
-
-  .image-container {
-    display: grid;
-    grid-auto-columns: 1fr;
-    grid-auto-rows: 1fr;
-    grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: repeat(4, 1fr);
-    gap: 8px 8px;
-  }
-
-  .image {
-    background-color: aqua;
-    border: 1px solid green;
-  }
+.hideElement {
+  display: none;
 }
