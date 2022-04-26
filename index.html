@@ -1,58 +1,70 @@
+
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script type="module" src="./scripts/main.js"></script>
-    <link rel="stylesheet" href="./styles/main.css">
+    <script type="module" src="./scripts/login.js"></script>
+    <script type="module" src="./scripts/timer.js"></script>
+    <link rel="stylesheet" href="./styles/main.css" />
+    <link rel="stylesheet" href="./styles/login_page.css" />
+    <link rel="stylesheet" href="./styles/game_page.css" />
     <title>Memory</title>
-</head>
-<body>
-    <header>
-        <h1>
-            HEADER
-        </h1>
-    </header>
-    <section id="loginPage" class="login-section split login-bg  hideElement ">
-        <img src="./assets/Logo.png" alt="Game logo">
-    
-        <div class="form-container">
-            <img src="./assets/start.png" alt="" class="img-game-start">
-            <form action="">
-                <input type="text" id="userNameImput" class="user-name-input" placeholder="USER NAME"/>
-                <button type="button" id="btnLogIn" class="btn-log-in">PLAY</button>
-                <button>CHALLENGE</button>
-            </form>
+  </head>
+  <body>
+    <section id="loginPage" class="login-section">
+      <div class="form-container">
+        <div class="timer">
+          <label id="minutes">00</label>
+          <label id="colon">:</label>
+          <label id="seconds">00</label>
         </div>
 
+        <h1>MEMORY</h1>
+        <form action="">
+          <input
+            type="text"
+            id="userNameImput"
+            class="user-name-input"
+            placeholder="USER NAME"
+          />
+          <button type="button" id="btnLogIn" class="btn-log-in">PLAY</button>
+          <button type="button" id="btnChallenge">CHALLENGE</button>
+        </form>
+      </div>
+      <div class="scores-container">
+        <h2>USER SCORES</h2>
+        <ul id="usersTable" class="user--table-list"></ul>
+      </div>
     </section>
-    <section id="gamePage" class="game-section split ">
+    <section id="gamePage" class="game-section split hideElement">
+
     
-        <div id="cardWrapper" class="card-wrapper ">
-            <div class="card-box"></div>
-            <div class="card-box"></div>
-            <div class="card-box"></div>
-            <div class="card-box"></div>
-            <div class="card-box"></div>
-            <div class="card-box"></div>
-            <div class="card-box"></div>
-            <div class="card-box"></div>
-            <div class="card-box"></div>
-            <div class="card-box"></div>
-            <div class="card-box"></div>
-            <div class="card-box"></div>
-            <div class="card-box"></div>
-            <div class="card-box"></div>
-            <div class="card-box"></div>
-            <div class="card-box"></div>
+            <div id="cardWrapper" class="card-wrapper ">
+                <div class="card-box"></div>
+                <div class="card-box"></div>
+                <div class="card-box"></div>
+                <div class="card-box"></div>
+                <div class="card-box"></div>
+                <div class="card-box"></div>
+                <div class="card-box"></div>
+                <div class="card-box"></div>
+                <div class="card-box"></div>
+                <div class="card-box"></div>
+                <div class="card-box"></div>
+                <div class="card-box"></div>
+                <div class="card-box"></div>
+                <div class="card-box"></div>
+                <div class="card-box"></div>
+                <div class="card-box"></div>
+                </div>
+            <div>
+                <!-- dos listas name total score  -->
             </div>
-        <div>
-            <!-- dos listas name total score  -->
-        </div>
-</section>
+    </section>
 
-        <section id="winPage" class="section win-section hideElement"></section>
-
-</body>
+    <section id="winPage" class="section win-section hideElement"></section>
+  </body>
 </html>

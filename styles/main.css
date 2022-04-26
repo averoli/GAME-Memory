@@ -1,36 +1,31 @@
-@import url(login_page.css);
-@import url(game_page.css);
-body,
-* {
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300;400&display=swap');
+
+html, body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
 body {
-  min-height: 100vh;
-  }
-  section {
-    padding: 1em 0;
-    margin: 1rem;
-  }
+  font-family: 'Roboto Condensed', sans-serif;
+}
+section {
+  padding: 1em 0;
+  margin: 1rem;
+}
+.split {
+  display: flex;
+  flex-direction: column;
+}
+
+@media (max-width: 300px) {
   .split {
-    display: flex;
-    flex-direction: column;
+    flex-direction: row;
   }
-
-  @media (min-width:50rem) {
-    .split {
-      flex-direction: row;
-
-    }
-    .split>* {
-      
-      flex-basis: 100%;
-    }
-
+  .split > * {
+    flex-basis: 100%;
+  }
 }
 .hideElement {
   display: none;
 }
-

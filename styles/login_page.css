@@ -1,58 +1,125 @@
 .login-section {
-    margin-inline: auto;
-    width: min(90%, 90rem);
-    background-color: rgb(255, 255, 255);
-    border-radius: 1rem;
-    background: #F7F8F8;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #ef233c;
+  background-image: url(../assets/background2.png);
+  background-position: top;
+  background-position: right;
+  background-size: cover;
+  opacity: 80%;
+  margin: 0%;
+  z-index: -1;
+}
+
+.timer {
+  display: flex;
+
+}
+#seconds {
+  font-size: 5rem;
+}
+#minutes {
+  font-size: 5rem;
+}
+#colon {
+  font-size: 5rem;
 }
 
 .form-container {
-    border: 2px solid black;
-    margin: 2em;
-    border-radius: 1em;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+  display: flex;
+  flex-direction: column;
+  height: 60%;
+  justify-content: center;
+  align-items: center;
+  z-index: 1;
+}
+
+h1 {
+  margin-bottom: 3rem;
+  font-weight: 300;
 }
 
 form {
-    display: flex;
-    flex-direction: column;
-    padding: 0 1em;
-    justify-content: center;
-    max-width: 100%;
+  display: flex;
+  flex-direction: column;
+  padding: 0;
+  justify-content: center;
+  max-width: 100%;
 }
 
-form>* {
-    margin-bottom: 1em;
+form > * {
+  margin-bottom: 1em;
 }
 
-img {
-    display: block;
-    max-width: 100%;
+.user-name-input {
+  padding: 10px;
+  border-radius: 5px;
+  background-color: #000000;
+  color: #EDF2F4;
+  letter-spacing: 0.3rem;
+  text-align: center;
 }
 
-@media (min-width:50rem) {
+button {
+  border-radius: 5px;
+  width: 100%;
+  background-color: #8D99AE;
+  color: #edf2f4;
+  letter-spacing: 0.3rem;
+  padding: 10px 20px;
+}
 
-    .login-section {
-        /* fallback for old browsers */
-        background: -webkit-linear-gradient(to right, #F7F8F8, #ff1616);
-        /* Chrome 10-25, Safari 5.1-6 */
-        background-image: url("../assets/background2.png"), linear-gradient(to right, #F7F8F8, #ff1616);
-        /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-        background-repeat: no-repeat;
-        background-size: cover;
-        background-position: right top;
-        border-radius: 1em;
-        width: 90%;
-    }
+@media (max-width: 600px) {
+  h1 {
+    font-size: 3rem;
+  }
+  button {
+    padding: 10px;
+  }
+}
 
-    .form-container {
-        border: 1px solid white;
-    }
+@media (min-width: 600px) {
+  h1 {
+    font-size: 4rem;
+  }
+  form {
+    width: 140%;
+  }
+  button {
+    font-size: 14px;
+  }
+}
 
-    form>* {
-        height: 5rem;
-    }
+.scores-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
 
+.user--table-list {
+  list-style-type: none;
+  padding-bottom: 5px;
+}
+
+h2 {
+  margin-bottom: 3rem;
+  font-weight: 300;
+}
+
+@media (max-width: 600px) {
+  h2 {
+    font-size: 1.5rem;
+    color: #8D99AE;
+  }
+
+}
+
+@media (min-width: 600px) {
+  h2 {
+    font-size: 2rem;
+  }
 }
