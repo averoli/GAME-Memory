@@ -50,11 +50,7 @@ img {
     .form-container {
         border: 1px solid white;
     }
-    /* form {
-            margin-top: -3rem;
-            z-index: 2;
-        } */
-    
+
     form>* {
         height: 5rem;
     }
