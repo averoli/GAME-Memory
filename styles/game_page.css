@@ -2,6 +2,8 @@
     margin-inline: auto;
     width: min(90%, 90rem);
     border-radius: 1rem;
+    display: flex;
+    align-items: space-around
 }
 
 /* img {
@@ -14,8 +16,9 @@
     grid-template-rows: repeat(4, 5rem);
     grid-template-columns: repeat(4, 5rem);
     gap: 1rem 1rem;
-    margin: 1rem;
-    width: 100%;
+    margin: auto;
+    width: 50%;
+    
     }
     
     .front,

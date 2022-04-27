@@ -10,6 +10,9 @@ body {
   font-family: 'Roboto Condensed', sans-serif;
 }
 
+section{
+  height: 100vh;
+}
 .split {
   display: flex;
   flex-direction: column;
