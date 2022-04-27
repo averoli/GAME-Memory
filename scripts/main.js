@@ -6,8 +6,7 @@ const loginPage = document.getElementById("loginPage");
 const gamePage = document.getElementById("gamePage");
 
 btnLogIn.addEventListener("click", (e) => {
-  loginPage.classList.add("hideElement");
-  console.log(loginPage.classList);
+  loginPage.classList.toggle("hideElement");
   gamePage.classList.toggle("hideElement");
   getCardData(cardData, cardItem);
 });

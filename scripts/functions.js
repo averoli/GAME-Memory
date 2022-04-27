@@ -1,13 +1,13 @@
+import { setTime } from "./timer.js";
 let i = 0;
 let clickCounter = 0;
 let cardNames = [];
 let matches = 8;
+let timerStart = false;
 const gameWrapper = document.getElementById("cardWrapper");
 
 //Game page
-
 /* Get image data */
-
 const getCardData = (cardData, cardItem) => {
   cardData.sort(() => Math.random() - 0.5);
 
@@ -30,6 +30,7 @@ const getCardData = (cardData, cardItem) => {
     i++;
 
     cardContainer.addEventListener("click", (e) => {
+      timerStart = true;
       cardImage.classList.toggle("toggle");
       cardContainer.classList.toggle("toggle");
       checkCards(cardContainer);
@@ -37,7 +38,12 @@ const getCardData = (cardData, cardItem) => {
   });
 };
 
-function checkCards(card) {
+if (timerStart) {
+  console.log("sssssss");
+  setTime();
+}
+
+const checkCards = (card) => {
   clickCounter++;
   cardNames.push(card);
   card.style.pointerEvents = "none";
@@ -46,8 +52,6 @@ function checkCards(card) {
     gameWrapper.style.pointerEvents = "none";
     const firstCardName = document.getElementById(`${cardNames[0].id}`);
     const secondCardName = document.getElementById(`${cardNames[1].id}`);
-
-    console.log(firstCardName.name);
 
     if (
       firstCardName.getAttribute("name") === secondCardName.getAttribute("name")
@@ -75,6 +79,6 @@ function checkCards(card) {
       }, 1000);
     }
   }
-}
+};
 
 export { getCardData };
