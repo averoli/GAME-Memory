@@ -6,6 +6,7 @@ let clickCounter = 0;
 let cardNames = [];
 let matches = 8;
 
+
 document.addEventListener("DOMContentLoaded", (e) => {
   getCardData(cardData, cardItem);
 });
@@ -78,3 +79,4 @@ function checkCards(card) {
     }
   }
 }
+

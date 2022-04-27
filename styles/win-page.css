@@ -1,0 +1,7 @@
+.win-block{
+    display: flex;
+    flex-direction: column;
+    background-color: aqua;
+    width: fit-content;
+    height: fit-content;
+}

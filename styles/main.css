@@ -9,10 +9,7 @@ html, body {
 body {
   font-family: 'Roboto Condensed', sans-serif;
 }
-section {
-  padding: 1em 0;
-  margin: 1rem;
-}
+
 .split {
   display: flex;
   flex-direction: column;
@@ -29,3 +26,4 @@ section {
 .hideElement {
   display: none;
 }
+

@@ -8,13 +8,14 @@
     <script type="module" src="./scripts/main.js"></script>
     <script type="module" src="./scripts/login.js"></script>
     <script type="module" src="./scripts/timer.js"></script>
+    <script type="module" src="./scripts/win.js"></script>
     <link rel="stylesheet" href="./styles/main.css" />
     <link rel="stylesheet" href="./styles/login_page.css" />
     <link rel="stylesheet" href="./styles/game_page.css" />
     <title>Memory</title>
   </head>
   <body>
-    <section id="loginPage" class="login-section">
+    <section id="loginPage" class="section">
       <div class="form-container">
         <div class="timer">
           <label id="minutes">00</label>
@@ -22,7 +23,7 @@
           <label id="seconds">00</label>
         </div>
 
-        <h1>MEMORY</h1>
+        <h1 id="url">MEMORY</h1>
         <form action="">
           <input
             type="text"
@@ -39,10 +40,8 @@
         <ul id="usersTable" class="user--table-list"></ul>
       </div>
     </section>
-    <section id="gamePage" class="game-section split hideElement">
-
-    
-            <div id="cardWrapper" class="card-wrapper ">
+    <section id="gamePage" class="game-section split ">
+            <div id="cardWrapper" class="card-wrapper">
                 <div class="card-box"></div>
                 <div class="card-box"></div>
                 <div class="card-box"></div>
@@ -65,6 +64,15 @@
             </div>
     </section>
 
-    <section id="winPage" class="section win-section hideElement"></section>
+    <section id="winPage" class="section hideElement">
+<div class="win-block">
+  <h2 id="winner"></h2>
+<p>You won in </p>
+<button>PLAY AGAIN</button>
+</div>
+<div id="totalScores" class="total-scores-block">
+  <h3>User Scores</h3>
+</div>
+    </section>
   </body>
 </html>
