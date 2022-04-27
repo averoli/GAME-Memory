@@ -2,7 +2,7 @@ import setTime from "./timer.js"
 
 const btnLogIn = document.getElementById("btnLogIn");
 const inputUser = document.getElementById("userNameImput");
-
+let clickPlay = 0
 
 let playerList = [];
 let userData = new Object();
@@ -19,9 +19,12 @@ if(users.length > 0){
 }
 }
 
-btnLogIn.addEventListener("click", btnLogIn());
+btnLogIn.addEventListener("click", play);
 
-function btnLogIn() {
+function play() {
+  clickPlay++
+  if (clickPlay===1){    
+  
   if (inputUser.value !== "") {
     userData = {
       name: inputUser.value,
@@ -42,6 +45,6 @@ function btnLogIn() {
   }
   setInterval(setTime, 1000);
   inputUser.value = "";
-}
+}}
 
 
