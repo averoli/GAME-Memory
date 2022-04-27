@@ -30,18 +30,23 @@ const getCardData = (cardData, cardItem) => {
     i++;
 
     cardContainer.addEventListener("click", (e) => {
-      timerStart = true;
       cardImage.classList.toggle("toggle");
       cardContainer.classList.toggle("toggle");
       checkCards(cardContainer);
+      startTimer();
     });
   });
 };
-
-if (timerStart) {
-  console.log("sssssss");
+const startTimer = () => {
+  if (!timerStart) timer();
+};
+const timer = () => {
   setTime();
-}
+  timerStart = true;
+};
+
+  
+
 
 const checkCards = (card) => {
   clickCounter++;

@@ -6,7 +6,9 @@ let totalSeconds = 0;
 
  function setTime() {
    ++totalSeconds;
-   seconds.textContent = convert(totalSeconds % 60);
+   const start = new Date();
+   start.setSeconds(start.getSeconds());
+   seconds.textContent = convert(start.getSeconds());
    minutes.textContent = convert(parseInt(totalSeconds / 60));
    console.log(seconds);
  }          
