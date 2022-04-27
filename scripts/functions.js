@@ -1,10 +1,12 @@
-import { setTime } from "./timer.js";
+// import { setTime } from "./timer.js";
+const gameWrapper = document.getElementById("cardWrapper");
+const seconds = document.getElementById("seconds");
 let i = 0;
 let clickCounter = 0;
+let score = 0;
 let cardNames = [];
-let matches = 8;
+let matches = 1;
 let timerStart = false;
-const gameWrapper = document.getElementById("cardWrapper");
 
 //Game page
 /* Get image data */
@@ -33,20 +35,25 @@ const getCardData = (cardData, cardItem) => {
       cardImage.classList.toggle("toggle");
       cardContainer.classList.toggle("toggle");
       checkCards(cardContainer);
-      startTimer();
+      timer();
+      console.log(matches);
     });
   });
 };
-const startTimer = () => {
-  if (!timerStart) timer();
-};
+
 const timer = () => {
-  setTime();
-  timerStart = true;
+  if (!timerStart) {
+    const playerScore = setInterval(() => {
+      seconds.textContent = ++score;
+
+      if (matches == 0) {
+        console.log("eeeend");
+        clearInterval(playerScore);
+      }
+    }, 1000);
+    timerStart = true;
+  }
 };
-
-  
-
 
 const checkCards = (card) => {
   clickCounter++;
@@ -68,7 +75,7 @@ const checkCards = (card) => {
       cardNames = [];
       clickCounter = 0;
       if (matches == 0) {
-        console.log("copion");
+        timerStart = false;
       }
     } else {
       firstCardName.style.pointerEvents = "auto";

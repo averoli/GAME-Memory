@@ -38,6 +38,6 @@ function btnLogIn() {
     listElement.textContent = playerList[actualPlayer].name;
     document.getElementById("usersTable").appendChild(listElement);
   }
-  setInterval(setTime, 1000);
+  // setInterval(setTime, 1000);
   inputUser.value = "";
 }
