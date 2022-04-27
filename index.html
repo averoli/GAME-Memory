@@ -6,12 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script type="module" src="./scripts/main.js"></script>
     <script type="module" src="./scripts/login.js"></script>
-    <script type="module" src="./scripts/timer.js"></script>
-    <script type="module" src="./scripts/win.js"></script>
     <link rel="stylesheet" href="./styles/main.css" />
-    <link rel="stylesheet" href="./styles/login_page.css" />
-    <link rel="stylesheet" href="./styles/game_page.css" />
-    <link rel="stylesheet" href="./styles/win_page.css" />
+    
     <title>Memory</title>
   </head>
   <body>
@@ -30,7 +26,9 @@
         </form>
       </div>
     </section>
-    <section id="gamePage" class="game-section">
+
+
+    <section id="gamePage" class="game-section hideElement">
      
       <div id="cardWrapper" class="card-wrapper">
         <div class="card-box"></div>
@@ -59,7 +57,7 @@
       </div>
     </section>
 
-    <section id="winPage" class="section win ">
+    <section id="winPage" class="section win  ">
       <div class="win-block">
         <h1 id="winner" class="h1-winner"></h2>
         <p>You won in</p>

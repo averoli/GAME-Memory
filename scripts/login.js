@@ -1,4 +1,4 @@
-import setTime from "./timer.js";
+
 
 const btnLogIn = document.getElementById("btnLogIn");
 const inputUser = document.getElementById("userNameImput");
@@ -27,7 +27,7 @@ function play() {
   if (inputUser.value !== "") {
     userData = {
       name: inputUser.value,
-      totalScore: 0,
+      score: 0,
     };
     playerList.push(userData);
   }
@@ -39,10 +39,11 @@ function play() {
   if (playerList.length > 0) {
     let actualPlayer = playerList.length - 1;
     let listElement = document.createElement("li");
+    let scoreElement = document.createElement("li");
     listElement.textContent = playerList[actualPlayer].name;
+    scoreElement.textContent=playerList[actualPlayer].score;
     document.getElementById("usersTable").appendChild(listElement);
+    document.getElementById("scoreTable").appendChild(scoreElement);
   }
-  setInterval(setTime, 1000);
-
   inputUser.value = "";
 }
