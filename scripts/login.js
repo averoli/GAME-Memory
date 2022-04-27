@@ -2,10 +2,6 @@ import setTime from "./timer.js";
 
 const btnLogIn = document.getElementById("btnLogIn");
 const inputUser = document.getElementById("userNameImput");
-<<<<<<< HEAD
-=======
-let clickPlay = 0
->>>>>>> ac7b18444ed5ecff1cffe76a08159e3794456693
 
 let playerList = [];
 let userData = new Object();
@@ -17,26 +13,17 @@ if (localStorage.length > 0) {
     for (let i = 0; i < users.length; i++) {
       let listElement = document.createElement("li");
       listElement.textContent = users[i].name;
+      let scoreElement = document.createElement("li");
+      scoreElement.textContent = users[i].totalScore;
       document.getElementById("usersTable").appendChild(listElement);
+      document.getElementById("scoreTable").appendChild(scoreElement);
     }
   }
 }
 
 btnLogIn.addEventListener("click", play);
-if('click' > 1){
-  
-}
-<<<<<<< HEAD
-function play() {
-=======
-
-btnLogIn.addEventListener("click", play);
 
 function play() {
-  clickPlay++
-  if (clickPlay===1){    
-  
->>>>>>> ac7b18444ed5ecff1cffe76a08159e3794456693
   if (inputUser.value !== "") {
     userData = {
       name: inputUser.value,
@@ -56,7 +43,6 @@ function play() {
     document.getElementById("usersTable").appendChild(listElement);
   }
   setInterval(setTime, 1000);
-  
-  inputUser.value = "";
-}}
 
+  inputUser.value = "";
+}

@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -12,13 +11,12 @@
     <link rel="stylesheet" href="./styles/main.css" />
     <link rel="stylesheet" href="./styles/login_page.css" />
     <link rel="stylesheet" href="./styles/game_page.css" />
+    <link rel="stylesheet" href="./styles/win_page.css" />
     <title>Memory</title>
   </head>
   <body>
-    <section id="loginPage" class="section">
+    <section id="loginPage" class="section login-page">
       <div class="form-container">
-        
-
         <h1 id="url">MEMORY</h1>
         <form action="">
           <input
@@ -31,50 +29,49 @@
           <button type="button" id="btnChallenge">CHALLENGE</button>
         </form>
       </div>
-      <div class="scores-container">
-        <h2>USER SCORES</h2>
-        <ul id="usersTable" class="user--table-list"></ul>
+    </section>
+    <section id="gamePage" class="game-section">
+     
+      <div id="cardWrapper" class="card-wrapper">
+        <div class="card-box"></div>
+        <div class="card-box"></div>
+        <div class="card-box"></div>
+        <div class="card-box"></div>
+        <div class="card-box"></div>
+        <div class="card-box"></div>
+        <div class="card-box"></div>
+        <div class="card-box"></div>
+        <div class="card-box"></div>
+        <div class="card-box"></div>
+        <div class="card-box"></div>
+        <div class="card-box"></div>
+        <div class="card-box"></div>
+        <div class="card-box"></div>
+        <div class="card-box"></div>
+        <div class="card-box"></div>
+      </div>
+   
+      <!-- dos listas name total score  -->
+      <div class="timer">
+        <!-- <label id="minutes">00</label>
+        <label id="colon">:</label> -->
+        <label id="seconds">000</label>
       </div>
     </section>
-    <section id="gamePage" class="game-section ">
 
-    
-            <div id="cardWrapper" class="card-wrapper ">
-                <div class="card-box"></div>
-                <div class="card-box"></div>
-                <div class="card-box"></div>
-                <div class="card-box"></div>
-                <div class="card-box"></div>
-                <div class="card-box"></div>
-                <div class="card-box"></div>
-                <div class="card-box"></div>
-                <div class="card-box"></div>
-                <div class="card-box"></div>
-                <div class="card-box"></div>
-                <div class="card-box"></div>
-                <div class="card-box"></div>
-                <div class="card-box"></div>
-                <div class="card-box"></div>
-                <div class="card-box"></div>
-                </div>           
-                <!-- dos listas name total score  -->
-                <div class="timer">
-                  <label id="minutes">00</label>
-                  <label id="colon">:</label>
-                  <label id="seconds">00</label>
-                </div>
-            
-    </section>
-
-    <section id="winPage" class="section hideElement">
-<div class="win-block">
-  <h2 id="winner"></h2>
-<p>You won in </p>
-<button>PLAY AGAIN</button>
-</div>
-<div id="totalScores" class="total-scores-block">
-  <h3>User Scores</h3>
-</div>
+    <section id="winPage" class="section win ">
+      <div class="win-block">
+        <h1 id="winner" class="h1-winner"></h2>
+        <p>You won in</p>
+        <button type="button" class="btn-play">PLAY AGAIN</button>
+      </div>
+      <div class="scores-container">
+        <h2>USER SCORES</h2>
+        <div class="score-wrapper">
+        <ul id="usersTable" class="user--table-list"></ul>
+        <ul id="scoreTable" class="score--table-list"></ul>
+      </div>
+      </div>
     </section>
   </body>
 </html>
