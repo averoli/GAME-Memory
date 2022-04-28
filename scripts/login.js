@@ -24,6 +24,7 @@ if (localStorage.length > 0) {
 btnLogIn.addEventListener("click", play);
 
 function play() {
+
   if (inputUser.value !== "") {
     userData = {
       name: inputUser.value,
