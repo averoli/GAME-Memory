@@ -47,8 +47,7 @@ const timer = () => {
       seconds.textContent = ++score;
 
       if (matches == 0) {
-        console.log("eeeend");
-        clearInterval(playerScore);
+        nextSection();
       }
     }, 1000);
     timerStart = true;
@@ -93,6 +92,15 @@ const checkCards = (card) => {
   }
 };
 
+function nextSection() {
+  const activeSection = document.querySelector("[active-section]");
+
+  activeSection.classList.toggle("hideElement");
+  activeSection.nextElementSibling.classList.toggle("hideElement");
+  activeSection.removeAttribute("active-section");
+  activeSection.nextElementSibling.setAttribute("active-section", "");
+}
+
 // function reset(){
 
 //   let data = localStorage.getItem("all_users");
@@ -110,4 +118,4 @@ const checkCards = (card) => {
 //   inputUser.value = "";
 // }
 
-export { getCardData };
+export { getCardData, nextSection };
